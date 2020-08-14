@@ -14,18 +14,19 @@ var db        = {};
 // }
 
 
-const sequelize = new Sequelize("hoteldb", "cwqbadfs", "w2V9ih7_zdzmR_a2jH9smaEMQhlDWnag", {
-	host: "satao.db.elephantsql.com",
-	dialect: "postgres",
-	operatorAliases: false,
-	pool: {
-		max: 5, //maximum number of connections allowed
-		min: 0, // min no. of connections
-		aquire: 30000, //max time in milliseconds to get a connection before sending error
-		idle: 10000 //max time connection can be idle for
-	}
-})
+// const sequelize = new Sequelize("hoteldb", "cwqbadfs", "w2V9ih7_zdzmR_a2jH9smaEMQhlDWnag", {
+// 	host: "satao.db.elephantsql.com",
+// 	dialect: "postgres",
+// 	operatorAliases: false,
+// 	pool: {
+// 		max: 5, //maximum number of connections allowed
+// 		min: 0, // min no. of connections
+// 		aquire: 30000, //max time in milliseconds to get a connection before sending error
+// 		idle: 10000 //max time connection can be idle for
+// 	}
+// })
 
+const sequelize = new Sequelize('postgres://cwqbadfs:w2V9ih7_zdzmR_a2jH9smaEMQhlDWnag@satao.db.elephantsql.com:5432/cwqbadfs')
 
 fs
   .readdirSync(__dirname)
