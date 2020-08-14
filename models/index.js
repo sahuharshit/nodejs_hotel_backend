@@ -14,8 +14,8 @@ var db        = {};
 // }
 
 
-const sequelize = new Sequelize("hoteldb", "postgres", "root", {
-	host: "localhost",
+const sequelize = new Sequelize("hoteldb", "cwqbadfs", "w2V9ih7_zdzmR_a2jH9smaEMQhlDWnag", {
+	host: "satao.db.elephantsql.com",
 	dialect: "postgres",
 	operatorAliases: false,
 	pool: {
