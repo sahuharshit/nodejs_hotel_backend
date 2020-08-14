@@ -7,6 +7,10 @@ let PORT = process.env.PORT || 5000
 
 app.use(bodyParser.json())
 app.use( bodyParser.urlencoded( { extended: false } ))
+app.use((req,res,next)=>{
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+})
 
 const Users = require("./routes/Users")
 const Payment = require("./routes/Payment")
