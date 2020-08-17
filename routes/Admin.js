@@ -15,7 +15,15 @@ Admin.get("/allUsers", async (req, res) => {
             attributes: ['id', 'name', 'email', 'contactNumber']
         })
 
-        res.send(data)
+        if (req.query.getcount=='true'){
+            console.log("getcount");
+            res.send({count:data.length});
+        }
+        else{
+            console.log("getcount=false");
+            res.send(data)
+        }
+
     } catch (e) {
         console.log(e)
         console.log("Error in Admin - /allUsers")
